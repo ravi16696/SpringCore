@@ -1,4 +1,4 @@
-package com.lifecycleannotations;
+package com.lifecycle.lifecycleannotations;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;

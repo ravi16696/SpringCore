@@ -8,11 +8,18 @@
                 http://www.springframework.org/schema/context
                 https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- more bean definitions go here -->
+<!--    start and destroy method won't work until we add this line, because that was deprecated-->
 
-    <bean class="com.beanlifecycle.Samosa" name="samosa1"
-          init-method="init" destroy-method="destroy">
-        <property name="price" value="10"/>
+<!--    this will enable all the annotation-->
+<!--    <context:annotation-config/>-->
+
+<!--    if we need to enable only those two annotation for start and destroy then we have to create below bean-->
+
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+
+    <!-- more bean definitions go here -->
+    <bean class="com.lifecycle.lifecycleannotations.Example" name="example1">
+        <property name="subject" value="science"/>
     </bean>
 
 </beans>

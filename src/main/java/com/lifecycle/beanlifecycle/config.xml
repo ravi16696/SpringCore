@@ -9,8 +9,10 @@
                 https://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- more bean definitions go here -->
-    <bean class="com.lifecycleinterface.Pepsi" name="pepsi1">
-        <property name="price" value="5"/>
+
+    <bean class="com.lifecycle.beanlifecycle.Samosa" name="samosa1"
+          init-method="init" destroy-method="destroy">
+        <property name="price" value="10"/>
     </bean>
 
 </beans>

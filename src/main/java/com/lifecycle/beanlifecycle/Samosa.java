@@ -1,4 +1,4 @@
-package com.beanlifecycle;
+package com.lifecycle.beanlifecycle;
 
 public class Samosa {
     private double price;
