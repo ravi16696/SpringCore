@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                https://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context
+                https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- more bean definitions go here -->
+
+    <bean class="com.ambiguity.Addition" name="addition">
+
+<!--        In this case it will call the constructor which is on top, if double is on top, it will call double else it will call int-->
+<!--        if I add a string constructor then it will call string constructor by default-->
+
+<!--        <constructor-arg value="10" type="int"/>-->
+<!--        <constructor-arg value="30" type="int"/>-->
+
+<!--        <constructor-arg value="10"/>-->
+<!--        <constructor-arg value="30"/>-->
+
+<!--        to be more specific to which constructor should be called, add type parameter like-->
+
+<!--        <constructor-arg value="10" type="int"/>-->
+<!--        so we understand the priority here, priority is like-->
+<!--        1. Beans consume all the data as string by default, so it will call the string constructor by default-->
+<!--        2. If string constructor is not present then it will call the one which is ont he top by default-->
+<!--        3. If we want to change the behaviour of above two,then just add a type parameter and define the type which-->
+<!--        spring will assume it.-->
+
+<!--        We can also arrange the constructor argument like this-->
+
+        <constructor-arg value="10" type="int" index="1"/>
+        <constructor-arg value="20" type="int" index="0"/>
+
+<!--        here this will take the first argument as 2nd and 2nd as first-->
+    </bean>
+
+</beans>
