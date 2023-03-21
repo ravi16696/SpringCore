@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                https://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context
+                https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- more bean definitions go here -->
+
+    <bean class="com.autowiring.Address" name="address">
+        <property name="street" value="IndraNagar"/>
+        <property name="city" value="Bangalore"/>
+    </bean>
+
+<!--    <bean class="com.autowiring.Address" name="address1">-->
+<!--        <property name="street" value="IndraNagar"/>-->
+<!--        <property name="city" value="Delhi"/>-->
+<!--    </bean>-->
+
+<!--    In case of byName, name should exactly match with the Employee class Address object name-->
+<!--    if we decleare two bean with the same name it will throw BeanDefinitionParsingException -->
+<!--    <bean class="com.autowiring.Employee" name="employee" autowire="byName"/>-->
+
+<!--    Now in case of type, it will just check for type, name can be anything, here it is just checking for address type object-->
+<!--    <bean class="com.autowiring.Employee" name="employee" autowire="byType"/>-->
+
+<!--    If there is any kind of collision then it will throw NoUniqueBeanDefinitionException exception.-->
+
+<!--    <bean class="com.autowiring.Employee" name="employee" autowire="constructor"/>-->
+
+<!--    constructor injection, will search for bean with matching name and type as parameter in constructor, in case of multiple-->
+<!--    bean, it will accept as null-->
+
+<!--    no autowiring-->
+    <bean class="com.autowiring.Employee" name="employee" autowire="no">
+        <property name="address" ref="address"/>
+    </bean>
+
+
+</beans>
