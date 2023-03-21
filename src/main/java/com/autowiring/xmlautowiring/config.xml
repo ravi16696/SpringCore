@@ -10,7 +10,7 @@
 
     <!-- more bean definitions go here -->
 
-    <bean class="com.autowiring.Address" name="address">
+    <bean class="com.autowiring.xmlautowiring.Address" name="address">
         <property name="street" value="IndraNagar"/>
         <property name="city" value="Bangalore"/>
     </bean>
@@ -35,7 +35,7 @@
 <!--    bean, it will accept as null-->
 
 <!--    no autowiring-->
-    <bean class="com.autowiring.Employee" name="employee" autowire="no">
+    <bean class="com.autowiring.xmlautowiring.Employee" name="employee" autowire="no">
         <property name="address" ref="address"/>
     </bean>
 

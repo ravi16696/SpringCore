@@ -1,4 +1,4 @@
-package com.autowiring;
+package com.autowiring.xmlautowiring;
 
 public class Address {
     private String street;
