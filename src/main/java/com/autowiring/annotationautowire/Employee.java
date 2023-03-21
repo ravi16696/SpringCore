@@ -2,6 +2,7 @@ package com.autowiring.annotationautowire;
 
 import com.autowiring.annotationautowire.Address;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Employee {
 
@@ -21,6 +22,7 @@ public class Employee {
     }
 
     @Autowired //- setter injection
+    @Qualifier("address5") // pass the name of the bean, that you want to be called
     public void setAddress(Address address) {
         this.address = address;
     }

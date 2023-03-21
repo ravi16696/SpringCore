@@ -12,14 +12,14 @@
     <context:annotation-config/>
     <!-- more bean definitions go here -->
     <bean class="com.autowiring.annotationautowire.Address" name="address3">
-        <property name="street" value="spice gardent"/>
+        <property name="street" value="spice garden"/>
         <property name="city" value="Bangalore"/>
     </bean>
 
-<!--    <bean class="com.autowiring.annotationautowire.Address" name="address5">-->
-<!--        <property name="street" value="spice gardent"/>-->
-<!--        <property name="city" value="Bangalore"/>-->
-<!--    </bean>-->
+    <bean class="com.autowiring.annotationautowire.Address" name="address5">
+        <property name="street" value="spice garden"/>
+        <property name="city" value="Delhi"/>
+    </bean>
 
 
 <!--    autowire bydefault uses type annotation, so we can have any name for the address-->
